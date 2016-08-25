@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <h1>Hello World</h1>
-    </div>
+
 </template>
 
 <style>
@@ -14,7 +12,7 @@
 
     export default {
 
-        ready() {
+        created() {
 
             this.storeToken()
 
@@ -23,13 +21,13 @@
         methods: {
 
             storeToken() {
+                debugger;
+
                 const token = this.$route.params.token;
 
                 Auth.setToken(token);
 
-                debugger;
-
-                router.go('/');
+                this.$router.go('/');
             }
 
         }

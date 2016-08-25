@@ -1,15 +1,23 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-    <link rel="stylesheet" href="<%= css %>">
-</head>
-<body>
+        <link rel="stylesheet" href="<%= domain %><%= css %>">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 
-<script src="<%= js %>"></script>
-</body>
+    </head>
+    <body>
+        <div id="app">
+            <h1>My App</h1>
+
+            <router-view></router-view>
+        </div>
+
+        <script src="<%= domain %><%= js %>"></script>
+    </body>
 </html>
+
