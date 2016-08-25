@@ -1,7 +1,9 @@
-var elixir = require('laravel-elixir');
+const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue');
 require('laravel-elixir-template');
+
+const domain = process.env.DOMAIN || 'https://contributive.io/';
 
 /*
  |--------------------------------------------------------------------------
@@ -18,5 +20,5 @@ elixir(function(mix) {
     mix.sass('app.scss')
         .webpack('app.js')
         .version(['js/app.js', 'css/app.css'])
-        .template('template/*.html');
+        .template('template/*.html', undefined, {domain});
 });
